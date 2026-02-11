@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Guide Stardew</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>My Stardew Tracker 🌾</h1>
+        <nav>
+            <button onclick="showTab('community')">Centre Communautaire</button>
+            <button onclick="showTab('crops')">Cultures & Saisons</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="community" class="tab-content">
+            <h2>Items Manquants</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="images/walleye.png" alt="Doré jaune">
+                    <h3>Doré jaune (Walleye)</h3>
+                    <p><strong>Où :</strong> Rivière, Lac de la forêt.</p>
+                    <p><strong>Condition :</strong> Pluie / Automne / 12h - 2h.</p>
+                </div>
+                </div>
+        </section>
+
+        <section id="crops" class="tab-content" style="display:none;">
+            <h2>Optimisation par Saison</h2>
+            <table>
+                <tr>
+                    <th>Saison</th>
+                    <th>Meilleure Culture</th>
+                    <th>Note</th>
+                </tr>
+                <tr>
+                    <td>Printemps</td>
+                    <td>Fraises</td>
+                    <td>Acheter au festival des oeufs.</td>
+                </tr>
+                <tr>
+                    <td>Été</td>
+                    <td>Carambole / Myrtilles</td>
+                    <td>Très rentable.</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <script>
+        function showTab(id) {
+            document.querySelectorAll('.tab-content').forEach(tab => tab.style.display = 'none');
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
